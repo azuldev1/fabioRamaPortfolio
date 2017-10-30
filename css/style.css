@@ -1,0 +1,37 @@
+@font-face {
+  font-family: Futura-Condensed;
+  src: url(/font/Futura-Condensed.otf); }
+
+.customCards .card:hover img {
+  opacity: 0.9; }
+
+.customCards .card:hover .card-overlay {
+  opacity: .6; }
+
+.customCards .card {
+  border: none; }
+  .customCards .card img {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden; }
+  .customCards .card .card-overlay {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%); }
+    .customCards .card .card-overlay .overlay-text {
+      background-color: #000000;
+      color: #ffffff;
+      font-family: Futura-Condensed;
+      font-size: 20px;
+      padding: 16px 32px;
+      height: 100%;
+      width: 100%; }
