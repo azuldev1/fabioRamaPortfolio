@@ -2,6 +2,9 @@
   font-family: Futura-Condensed;
   src: url(/font/Futura-Condensed.otf); }
 
+body {
+  background-color: #000000; }
+
 .customCards .card:hover img {
   opacity: 0.9; }
 
@@ -35,3 +38,17 @@
       padding: 16px 32px;
       height: 100%;
       width: 100%; }
+
+#sidebar-wrapper .sidebar-nav li a {
+  color: #ffffff; }
+
+body #sidebar-wrapper {
+  padding: 0 !important; }
+
+body .container-fluid {
+  padding: 0 !important; }
+
+@media (min-width: 768px) {
+  body #page-content-wrapper {
+    padding: 0;
+    position: relative; } }

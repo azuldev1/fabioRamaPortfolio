@@ -3,6 +3,11 @@
     font-family: Futura-Condensed;
     src: url(/font/Futura-Condensed.otf);
     }
+$mainBlack: #000000;
+$mainFontWhite: #ffffff;
+body{
+    background-color: $mainBlack;
+}
 
 .customCards{
     .card:hover img {
@@ -42,5 +47,28 @@
                 width: 100%;
             }
         }
+    }
+}
+
+//sideBar Custom CSS
+#sidebar-wrapper .sidebar-nav {
+    li {
+        a {
+            color: $mainFontWhite;
+        }
+    }
+}
+
+body #sidebar-wrapper {
+    padding:0 !important;
+}
+body .container-fluid {
+    padding:0 !important;
+}
+
+@media(min-width:768px) {
+    body #page-content-wrapper {
+      padding: 0;
+      position: relative;
     }
 }
