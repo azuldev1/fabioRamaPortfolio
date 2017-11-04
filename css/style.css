@@ -2,9 +2,6 @@
   font-family: Futura-Condensed;
   src: url(/font/Futura-Condensed.otf); }
 
-body {
-  background-color: #000000; }
-
 .customCards .card:hover img {
   opacity: 0.9; }
 
@@ -39,16 +36,45 @@ body {
       height: 100%;
       width: 100%; }
 
+#menuIcon {
+  display: inline-block;
+  top: 5px;
+  left: 5px;
+  text-align: center;
+  height: 40px;
+  width: 40px;
+  background-color: #000000;
+  position: absolute;
+  z-index: 10;
+  opacity: .5;
+  border: 2px solid black; }
+  #menuIcon a {
+    color: #ffffff;
+    vertical-align: middle; }
+  #menuIcon i {
+    font-size: 24px;
+    vertical-align: middle;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out; }
+
+#menuIcon .fa:hover {
+  background-color: transparent;
+  transform: scale(1.25); }
+
 #sidebar-wrapper .sidebar-nav li a {
   color: #ffffff; }
 
+body #page-content-wrapper {
+  padding: 0; }
+
 body #sidebar-wrapper {
-  padding: 0 !important; }
+  padding: 0 !important;
+  background: #000000; }
 
 body .container-fluid {
   padding: 0 !important; }
 
 @media (min-width: 768px) {
   body #page-content-wrapper {
-    padding: 0;
+    padding: 0 !important;
     position: relative; } }

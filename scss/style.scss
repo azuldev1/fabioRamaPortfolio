@@ -5,9 +5,6 @@
     }
 $mainBlack: #000000;
 $mainFontWhite: #ffffff;
-body{
-    background-color: $mainBlack;
-}
 
 .customCards{
     .card:hover img {
@@ -38,7 +35,7 @@ body{
             transform: translate(-50%, -50%);
             -ms-transform: translate(-50%, -50%);
             .overlay-text {
-                background-color:#000000,;
+                background-color:#000000;
                 color:#ffffff;
                 font-family: Futura-Condensed;
                 font-size: 20px;
@@ -50,6 +47,33 @@ body{
     }
 }
 
+#menuIcon {
+    display: inline-block;
+    top: 5px;
+    left: 5px;
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    background-color:#000000;
+    position: absolute;
+    z-index: 10;
+    opacity: .5;
+    border: 2px solid black;
+        a{
+            color: $mainFontWhite;
+            vertical-align: middle;
+        }
+        i {
+            font-size: 24px;
+            vertical-align: middle;
+            -webkit-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+        }
+}
+#menuIcon .fa:hover {
+    background-color: transparent;
+    transform: scale(1.25);
+}
 //sideBar Custom CSS
 #sidebar-wrapper .sidebar-nav {
     li {
@@ -58,17 +82,20 @@ body{
         }
     }
 }
-
+body #page-content-wrapper {
+    padding: 0;
+}
 body #sidebar-wrapper {
-    padding:0 !important;
+    padding: 0 !important;
+    background: $mainBlack;
 }
 body .container-fluid {
-    padding:0 !important;
+    padding: 0 !important;
 }
 
 @media(min-width:768px) {
     body #page-content-wrapper {
-      padding: 0;
+      padding: 0 !important;
       position: relative;
     }
 }
