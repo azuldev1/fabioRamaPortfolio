@@ -75,6 +75,10 @@ $mainFontWhite: #ffffff;
     transform: scale(1.25);
 }
 //sideBar Custom CSS
+body .sidebar-nav>.sidebar-brand {
+    height: 130px;
+    margin-bottom: 20px;
+}
 #sidebar-wrapper .sidebar-nav {
     li {
         a {
