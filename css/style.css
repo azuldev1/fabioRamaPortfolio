@@ -2,6 +2,9 @@
   font-family: Futura-Condensed;
   src: url(/font/Futura-Condensed.otf); }
 
+body {
+  background-color: #000000; }
+
 .customCards .card:hover img {
   opacity: 0.9; }
 
@@ -47,7 +50,7 @@
   position: absolute;
   z-index: 10;
   opacity: .5;
-  border: 2px solid black; }
+  border: 2px solid #000000; }
   #menuIcon a {
     color: #ffffff;
     vertical-align: middle; }
@@ -61,12 +64,16 @@
   background-color: transparent;
   transform: scale(1.25); }
 
-body .sidebar-nav > .sidebar-brand {
+body .sidebar-nav > #sidebar-brand {
   height: 130px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  transition: padding 0.2s ease-in-out; }
 
-#sidebar-wrapper .sidebar-nav li a {
-  color: #ffffff; }
+#sidebar-wrapper .sidebar-nav {
+  top: 120px;
+  display: none; }
+  #sidebar-wrapper .sidebar-nav li a {
+    color: #ffffff; }
 
 body #page-content-wrapper {
   padding: 0; }
@@ -96,3 +103,22 @@ body .container-fluid {
   body #page-content-wrapper {
     padding: 0 !important;
     position: relative; } }
+
+body #sidebar-wrapper {
+  width: 100px; }
+
+body #page-content-wrapper {
+  left: 100px; }
+
+body .toggled #page-content-wrapper {
+  left: 0; }
+
+body .toggled div#sidebar-brand {
+  padding-left: 20px; }
+
+body .toggled #sidebar-wrapper ul.sidebar-nav {
+  display: block; }
+
+@media (max-width: 768px) {
+  body .toggled #page-content-wrapper {
+    left: 250px; } }

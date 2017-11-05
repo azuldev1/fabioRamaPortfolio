@@ -3,9 +3,12 @@
     font-family: Futura-Condensed;
     src: url(/font/Futura-Condensed.otf);
     }
-$mainBlack: #000000;
-$mainFontWhite: #ffffff;
+$colorOne: #000000;
+$colorTwo: #ffffff;
 
+body {
+    background-color: $colorOne;
+}
 .customCards{
     .card:hover img {
         opacity: 0.9;
@@ -35,8 +38,8 @@ $mainFontWhite: #ffffff;
             transform: translate(-50%, -50%);
             -ms-transform: translate(-50%, -50%);
             .overlay-text {
-                background-color:#000000;
-                color:#ffffff;
+                background-color: $colorOne;
+                color: $colorTwo;
                 font-family: Futura-Condensed;
                 font-size: 20px;
                 padding: 16px 32px;
@@ -54,13 +57,13 @@ $mainFontWhite: #ffffff;
     text-align: center;
     height: 40px;
     width: 40px;
-    background-color:#000000;
+    background-color: $colorOne;
     position: absolute;
     z-index: 10;
     opacity: .5;
-    border: 2px solid black;
+    border: 2px solid $colorOne;
         a{
-            color: $mainFontWhite;
+            color: $colorTwo;
             vertical-align: middle;
         }
         i {
@@ -75,14 +78,18 @@ $mainFontWhite: #ffffff;
     transform: scale(1.25);
 }
 //sideBar Custom CSS
-body .sidebar-nav>.sidebar-brand {
+body .sidebar-nav>#sidebar-brand {
     height: 130px;
     margin-bottom: 20px;
+    transition: padding 0.2s ease-in-out;
 }
+
 #sidebar-wrapper .sidebar-nav {
+    top: 120px;
+    display: none;
     li {
         a {
-            color: $mainFontWhite;
+            color: $colorTwo;
         }
     }
 }
@@ -91,20 +98,20 @@ body #page-content-wrapper {
 }
 body #sidebar-wrapper {
     padding: 0 !important;
-    background: $mainBlack;
+    background: $colorOne;
 }
 body .container-fluid {
     padding: 0 !important;
 }
 .iconContainer {
-    color: $mainFontWhite;
+    color: $colorTwo;
     position: absolute;
     bottom: 0;
     padding-top: 15px;
     padding-bottom: 20px;
     margin-left: 40px;
     a {
-        color: $mainFontWhite;
+        color: $colorTwo;
         text-decoration: none;
     }
     .fa {
@@ -119,3 +126,35 @@ body .container-fluid {
       position: relative;
     }
 }
+
+// CUSTOM SIDEBAR CUSTOM ALWAY SHOW LOGO SASS
+
+body #sidebar-wrapper {
+    width: 100px;
+}
+body #page-content-wrapper{
+    left: 100px;
+}
+
+body .toggled {
+    #page-content-wrapper {
+        left: 0;
+    }
+     
+    div#sidebar-brand{
+        padding-left: 20px;
+    }
+    
+    #sidebar-wrapper ul.sidebar-nav {
+        display: block;
+    }
+}
+
+@media(max-width:768px) {
+    body .toggled {
+        #page-content-wrapper {
+            left: 250px;
+        }
+    }
+}
+
