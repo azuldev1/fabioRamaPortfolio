@@ -1,9 +1,10 @@
 @font-face {
   font-family: Futura-Condensed;
-  src: url(/font/Futura-Condensed.otf); }
+  src: url(/fonts/Futura-Condensed.otf); }
 
 body {
-  background-color: #000000; }
+  background-color: #000000;
+  font-family: Futura-Condensed; }
 
 .customCards .card:hover img {
   opacity: 0.9; }
@@ -12,6 +13,7 @@ body {
   opacity: .6; }
 
 .customCards .card {
+  background-color: transparent;
   border: none; }
   .customCards .card img {
     opacity: 1;
@@ -73,8 +75,17 @@ body .sidebar-nav > #sidebar-brand {
   top: 120px;
   display: none;
   position: static; }
-  #sidebar-wrapper .sidebar-nav li a {
-    color: #ffffff; }
+  #sidebar-wrapper .sidebar-nav .submenu li {
+    font-size: 15px; }
+    #sidebar-wrapper .sidebar-nav .submenu li a:before {
+      font-weight: 900;
+      font-size: 25px;
+      content: "\00b7\2009"; }
+  #sidebar-wrapper .sidebar-nav li {
+    font-size: 18px;
+    text-indent: 10px; }
+    #sidebar-wrapper .sidebar-nav li a {
+      color: #ffffff; }
 
 body #page-content-wrapper {
   padding: 0; }
@@ -99,6 +110,9 @@ body .container-fluid {
   .iconContainer .fa {
     padding-right: 10px;
     font-size: 26px; }
+  .iconContainer a:hover {
+    background-color: #000000;
+    opacity: .6; }
 
 @media (min-width: 768px) {
   body #page-content-wrapper {
@@ -115,7 +129,7 @@ body .toggled #page-content-wrapper {
   left: 0; }
 
 body .toggled div#sidebar-brand {
-  padding-left: 20px; }
+  padding-left: 10px; }
 
 body .toggled #sidebar-wrapper ul.sidebar-nav {
   display: block; }

@@ -1,13 +1,14 @@
 // Main Sass File
 @font-face {
     font-family: Futura-Condensed;
-    src: url(/font/Futura-Condensed.otf);
+    src: url(/fonts/Futura-Condensed.otf);
     }
 $colorOne: #000000;
 $colorTwo: #ffffff;
 
 body {
     background-color: $colorOne;
+    font-family: Futura-Condensed;
 }
 .customCards{
     .card:hover img {
@@ -18,6 +19,7 @@ body {
     }
     //BS override
     .card{
+        background-color: transparent; 
         border: none;
         img{
             opacity: 1;
@@ -88,7 +90,19 @@ body .sidebar-nav>#sidebar-brand {
     top: 120px;
     display: none;
     position: static;
+    .submenu {
+        li{
+            font-size: 15px;
+            a:before{
+                font-weight: 900;
+                font-size: 25px;
+                content:  "\00b7\2009";
+            }
+        }
+    }
     li {
+        font-size: 18px;
+        text-indent: 10px;
         a {
             color: $colorTwo;
         }
@@ -119,6 +133,10 @@ body .container-fluid {
         padding-right: 10px;
         font-size: 26px;
     }
+    a:hover {
+        background-color: $colorOne;
+        opacity: .6;
+    }
 }
 
 @media(min-width:768px) {
@@ -143,7 +161,7 @@ body .toggled {
     }
      
     div#sidebar-brand{
-        padding-left: 20px;
+        padding-left: 10px;
     }
     
     #sidebar-wrapper ul.sidebar-nav {
