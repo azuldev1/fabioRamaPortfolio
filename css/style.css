@@ -131,6 +131,9 @@ body .toggled #page-content-wrapper {
 body .toggled div#sidebar-brand {
   padding-left: 10px; }
 
+body .toggled .iconContainer {
+  margin-left: 25px; }
+
 body .toggled #sidebar-wrapper ul.sidebar-nav {
   display: block; }
 
