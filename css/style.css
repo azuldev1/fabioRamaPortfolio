@@ -71,7 +71,8 @@ body .sidebar-nav > #sidebar-brand {
 
 #sidebar-wrapper .sidebar-nav {
   top: 120px;
-  display: none; }
+  display: none;
+  position: static; }
   #sidebar-wrapper .sidebar-nav li a {
     color: #ffffff; }
 
@@ -87,7 +88,7 @@ body .container-fluid {
 
 .iconContainer {
   color: #ffffff;
-  position: absolute;
+  position: relative;
   bottom: 0;
   padding-top: 15px;
   padding-bottom: 20px;
