@@ -78,6 +78,20 @@ body #sidebar-wrapper {
 body .container-fluid {
   padding: 0 !important; }
 
+.iconContainer {
+  color: #ffffff;
+  position: absolute;
+  bottom: 0;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  margin-left: 40px; }
+  .iconContainer a {
+    color: #ffffff;
+    text-decoration: none; }
+  .iconContainer .fa {
+    padding-right: 10px;
+    font-size: 26px; }
+
 @media (min-width: 768px) {
   body #page-content-wrapper {
     padding: 0 !important;
